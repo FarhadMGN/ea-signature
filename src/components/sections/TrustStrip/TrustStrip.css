@@ -1,0 +1,23 @@
+.trust-strip {
+  border-block: 1px solid color-mix(in srgb, var(--color-mute) 22%, transparent);
+  padding-block: var(--space-md);
+}
+
+.trust-strip__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-sm) var(--space-md);
+}
+
+.trust-strip__item {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  letter-spacing: 0.03em;
+  color: var(--color-mute);
+}
+
+@media (min-width: 768px) {
+  .trust-strip__list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

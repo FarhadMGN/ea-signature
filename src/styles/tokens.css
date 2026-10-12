@@ -1,0 +1,26 @@
+:root {
+  /* Signature Mono — Variant C · fashion-tech restraint */
+  --color-bg: #0a0a0b;
+  --color-surface: #1a1a1c;
+  --color-mute: #8a8a8e;
+  --color-accent: #d4d0c8;
+  --color-text: #ededed;
+
+  --font-sans: 'Satoshi', 'Segoe UI', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+
+  --space-2xs: 0.5rem;
+  --space-xs: 0.75rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2.5rem;
+  --space-xl: 4rem;
+  --space-2xl: 6rem;
+
+  --container-width: 82rem;
+  --header-height: 4.5rem;
+  --radius: 0;
+  --radius-pill: 999px;
+
+  --transition-fast: 160ms ease;
+}

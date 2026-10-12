@@ -1,0 +1,12 @@
+.icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  object-fit: contain;
+  flex-shrink: 0;
+  /* SVG uses currentColor — invert for light icons on dark bg via filter when needed */
+  filter: invert(1) brightness(0.95);
+}
+
+.button--primary .icon {
+  filter: invert(0) brightness(0);
+}

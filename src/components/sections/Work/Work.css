@@ -1,0 +1,53 @@
+.work {
+  padding-block: var(--space-2xl);
+}
+
+.work__grid {
+  display: grid;
+  gap: var(--space-lg);
+}
+
+.work__card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.work__media {
+  aspect-ratio: 3 / 2;
+  overflow: hidden;
+  background: var(--color-surface);
+  margin-bottom: var(--space-2xs);
+}
+
+/* Portrait screenshots — keep full frame visible */
+.work__media--carousel {
+  aspect-ratio: 9 / 16;
+  max-height: 36rem;
+}
+
+.work__type {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-mute);
+}
+
+.work__name {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.work__result {
+  color: var(--color-mute);
+  font-size: 0.9375rem;
+  line-height: 1.4;
+}
+
+@media (min-width: 768px) {
+  .work__grid {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: start;
+  }
+}

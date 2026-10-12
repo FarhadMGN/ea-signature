@@ -1,0 +1,34 @@
+.audience {
+  padding-block: var(--space-2xl);
+}
+
+.audience__grid {
+  display: grid;
+  gap: var(--space-sm);
+}
+
+.audience__card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  padding: var(--space-md);
+  background: var(--color-surface);
+  border: 1px solid color-mix(in srgb, var(--color-mute) 35%, transparent);
+}
+
+.audience__card-title {
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+
+.audience__card-text {
+  color: var(--color-mute);
+  line-height: 1.45;
+  font-size: 0.9375rem;
+}
+
+@media (min-width: 768px) {
+  .audience__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

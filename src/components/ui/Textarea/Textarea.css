@@ -1,0 +1,30 @@
+.textarea {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xs);
+  padding: var(--space-sm) 1.125rem;
+  background: var(--color-surface);
+}
+
+.textarea__label {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  color: var(--color-mute);
+}
+
+.textarea__control {
+  width: 100%;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  color: var(--color-text);
+  outline: none;
+  resize: vertical;
+  min-height: 5rem;
+}
+
+.textarea__control::placeholder {
+  color: var(--color-mute);
+  opacity: 0.7;
+}

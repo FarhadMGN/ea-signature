@@ -1,0 +1,24 @@
+.footer {
+  border-top: 1px solid color-mix(in srgb, var(--color-mute) 25%, transparent);
+  padding-block: var(--space-lg);
+}
+
+.footer__inner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm) var(--space-md);
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer__brand {
+  font-weight: 500;
+  font-size: 0.8125rem;
+  letter-spacing: 0.04em;
+}
+
+.footer__meta,
+.footer__copy {
+  font-size: 0.8125rem;
+  color: var(--color-mute);
+}

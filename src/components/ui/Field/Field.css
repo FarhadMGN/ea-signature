@@ -1,0 +1,28 @@
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xs);
+  padding: var(--space-sm) 1.125rem;
+  background: var(--color-surface);
+}
+
+.field__label {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  color: var(--color-mute);
+}
+
+.field__control {
+  width: 100%;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  color: var(--color-text);
+  outline: none;
+}
+
+.field__control::placeholder {
+  color: var(--color-mute);
+  opacity: 0.7;
+}
