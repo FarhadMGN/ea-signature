@@ -13,21 +13,13 @@ export type SelectProps = {
   className?: string
 } & Omit<SelectHTMLAttributes<HTMLSelectElement>, 'id' | 'className'>
 
-function normalizeOptions(
-  options: SelectProps['options'],
-): SelectOption[] {
+function normalizeOptions(options: SelectProps['options']): SelectOption[] {
   return options.map((option) =>
     typeof option === 'string' ? { value: option, label: option } : option,
   )
 }
 
-export function Select({
-  label,
-  id,
-  options,
-  className = '',
-  ...rest
-}: SelectProps) {
+export function Select({ label, id, options, className = '', ...rest }: SelectProps) {
   const classes = ['select', className].filter(Boolean).join(' ')
   const normalized = normalizeOptions(options)
 

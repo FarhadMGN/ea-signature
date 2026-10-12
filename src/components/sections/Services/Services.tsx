@@ -15,9 +15,7 @@ export function Services() {
         <ul className="services__list">
           {SERVICES.map((service, index) => (
             <li key={service.title} className="services__item">
-              <span className="services__num">
-                {String(index + 1).padStart(2, '0')}
-              </span>
+              <span className="services__num">{String(index + 1).padStart(2, '0')}</span>
               <h3 className="services__name">{service.title}</h3>
             </li>
           ))}

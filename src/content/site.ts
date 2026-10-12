@@ -57,8 +57,7 @@ export const PROJECTS = [
     id: 'dinner-agent',
     title: 'Персональный ИИ-агент',
     type: 'ИИ-агент',
-    result:
-      'Подскажет, куда сходить на ужин, и поможет заказать продукты',
+    result: 'Подскажет, куда сходить на ужин, и поможет заказать продукты',
     images: [
       {
         src: '/images/cases/dinner-agent-chat.jpg',
@@ -74,8 +73,7 @@ export const PROJECTS = [
     id: 'media-summary',
     title: 'Пересказ аудио и видео',
     type: 'ИИ-контент',
-    result:
-      'Краткое содержание 20-минутного подкаста и часовых роликов на YouTube',
+    result: 'Краткое содержание 20-минутного подкаста и часовых роликов на YouTube',
     images: [
       {
         src: '/images/cases/marsumer-app-archive.jpg',

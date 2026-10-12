@@ -27,10 +27,7 @@ describe('Contact', () => {
     const view = within(container)
 
     await user.type(view.getByRole('textbox', { name: 'Имя' }), 'Иван')
-    await user.type(
-      view.getByRole('textbox', { name: 'Telegram или email' }),
-      '@ivan',
-    )
+    await user.type(view.getByRole('textbox', { name: 'Telegram или email' }), '@ivan')
     await user.type(view.getByRole('textbox', { name: 'О проекте' }), 'Нужен лендинг')
     await user.click(view.getByRole('button', { name: 'Отправить заявку' }))
 
