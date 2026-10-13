@@ -3,7 +3,7 @@ import { Button } from '@/components/ui/Button'
 import { Container } from '@/components/ui/Container'
 import { Field } from '@/components/ui/Field'
 import { Icon } from '@/components/ui/Icon'
-import { SectionHeading } from '@/components/ui/SectionHeading'
+import { Reveal } from '@/components/ui/Reveal'
 import { Select } from '@/components/ui/Select'
 import { Textarea } from '@/components/ui/Textarea'
 import { BUDGET_OPTIONS, PROJECT_TYPES, SITE } from '@/content/site'
@@ -57,62 +57,75 @@ export function Contact({ onSubmit }: ContactProps) {
   return (
     <section className="contact" id="contact" aria-labelledby="contact-title">
       <Container>
-        <SectionHeading
-          title="Связаться"
-          lead="Кратко опишите задачу. Отвечу в течение суток."
-          id="contact-title"
-        />
-
-        {submitted ? (
-          <p className="contact__success" role="status">
-            Спасибо. Свяжусь с вами в ближайшее время.
-          </p>
-        ) : (
-          <form className="contact__form" onSubmit={handleSubmit} noValidate>
-            <Field id="name" name="name" label="Имя" autoComplete="name" required />
-            <Field
-              id="client-contact"
-              name="contact"
-              label="Telegram или email"
-              autoComplete="email"
-              required
-            />
-            <Select
-              id="projectType"
-              name="projectType"
-              label="Тип проекта"
-              options={PROJECT_TYPES}
-            />
-            <Textarea
-              id="message"
-              name="message"
-              label="О проекте"
-              placeholder="Коротко о задаче…"
-              required
-            />
-            <Select id="budget" name="budget" label="Бюджет" options={BUDGET_OPTIONS} />
-
-            {error ? (
-              <p className="contact__error" role="alert">
-                {error}
+        <div className="contact__layout">
+          <Reveal>
+            <div className="contact__intro">
+              <h2 className="contact__title" id="contact-title">
+                Связаться
+              </h2>
+              <p className="contact__lead">
+                Кратко опишите задачу. Отвечу в течение суток.
               </p>
-            ) : null}
+              <div className="contact__direct">
+                <a className="contact__direct-link" href={SITE.telegram}>
+                  <Icon name="telegram" />
+                  Telegram
+                </a>
+                <a className="contact__direct-link" href={`mailto:${SITE.email}`}>
+                  <Icon name="mail" />
+                  {SITE.email}
+                </a>
+              </div>
+            </div>
+          </Reveal>
 
-            <Button type="submit" variant="primary">
-              Отправить заявку
-            </Button>
-          </form>
-        )}
+          <Reveal delayMs={80}>
+            {submitted ? (
+              <p className="contact__success" role="status">
+                Спасибо. Свяжусь с вами в ближайшее время.
+              </p>
+            ) : (
+              <form className="contact__form" onSubmit={handleSubmit} noValidate>
+                <Field id="name" name="name" label="Имя" autoComplete="name" required />
+                <Field
+                  id="client-contact"
+                  name="contact"
+                  label="Telegram или email"
+                  autoComplete="email"
+                  required
+                />
+                <Select
+                  id="projectType"
+                  name="projectType"
+                  label="Тип проекта"
+                  options={PROJECT_TYPES}
+                />
+                <Textarea
+                  id="message"
+                  name="message"
+                  label="О проекте"
+                  placeholder="Коротко о задаче..."
+                  required
+                />
+                <Select
+                  id="budget"
+                  name="budget"
+                  label="Бюджет"
+                  options={BUDGET_OPTIONS}
+                />
 
-        <div className="contact__direct">
-          <a className="contact__direct-link" href={SITE.telegram}>
-            <Icon name="telegram" />
-            Telegram
-          </a>
-          <a className="contact__direct-link" href={`mailto:${SITE.email}`}>
-            <Icon name="mail" />
-            {SITE.email}
-          </a>
+                {error ? (
+                  <p className="contact__error" role="alert">
+                    {error}
+                  </p>
+                ) : null}
+
+                <Button type="submit" variant="primary">
+                  Отправить заявку
+                </Button>
+              </form>
+            )}
+          </Reveal>
         </div>
       </Container>
     </section>

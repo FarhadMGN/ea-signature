@@ -1,6 +1,12 @@
 .container {
-  width: min(100% - 2 * var(--space-md), var(--container-width));
+  width: min(100% - 2 * var(--space-sm), var(--container-width));
   margin-inline: auto;
+}
+
+@media (min-width: 400px) {
+  .container {
+    width: min(100% - 2 * var(--space-md), var(--container-width));
+  }
 }
 
 @media (min-width: 768px) {

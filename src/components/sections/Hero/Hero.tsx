@@ -1,7 +1,7 @@
 import { Button } from '@/components/ui/Button'
 import { CachedImage } from '@/components/ui/CachedImage'
 import { Container } from '@/components/ui/Container'
-import { HERO } from '@/content/site'
+import { HERO, SITE } from '@/content/site'
 import './Hero.css'
 
 export type HeroProps = {
@@ -26,6 +26,7 @@ export function Hero({ imageSrc = '/images/hero-start.png' }: HeroProps) {
         </div>
 
         <Container className="hero__content">
+          <p className="hero__brand">{SITE.name}</p>
           <h1 className="hero__title" id="hero-title">
             {HERO.title}
           </h1>
