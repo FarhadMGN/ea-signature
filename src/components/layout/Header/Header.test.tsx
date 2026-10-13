@@ -6,7 +6,7 @@ describe('Header', () => {
   it('renders brand and primary CTA', () => {
     render(<Header />)
     expect(screen.getByText('Dev Evtushenko')).toBeInTheDocument()
-    expect(screen.getByRole('link', { name: 'Обсудить проект' })).toHaveAttribute(
+    expect(screen.getByRole('link', { name: 'Связаться' })).toHaveAttribute(
       'href',
       '#contact',
     )

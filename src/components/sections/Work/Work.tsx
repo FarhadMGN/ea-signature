@@ -8,11 +8,7 @@ export function Work() {
   return (
     <section className="work" id="work" aria-labelledby="work-title">
       <Container>
-        <SectionHeading
-          eyebrow="Избранные проекты"
-          title="Что уже работает"
-          id="work-title"
-        />
+        <SectionHeading title="Что уже работает" id="work-title" />
         <ul className="work__grid">
           {PROJECTS.map((project) => (
             <li key={project.id} className="work__card">

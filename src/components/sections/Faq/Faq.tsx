@@ -7,7 +7,7 @@ export function Faq() {
   return (
     <section className="faq" aria-labelledby="faq-title">
       <Container>
-        <SectionHeading eyebrow="FAQ" title="Частые вопросы" id="faq-title" />
+        <SectionHeading title="Частые вопросы" id="faq-title" />
         <ul className="faq__list">
           {FAQ_ITEMS.map((item) => (
             <li key={item.question} className="faq__item">

@@ -1,6 +1,7 @@
 import { Button } from '@/components/ui/Button'
 import { CachedImage } from '@/components/ui/CachedImage'
 import { Container } from '@/components/ui/Container'
+import { HERO } from '@/content/site'
 import './Hero.css'
 
 export type HeroProps = {
@@ -18,25 +19,23 @@ export function Hero({ imageSrc = '/images/hero-start.png' }: HeroProps) {
             alt=""
             loading="eager"
             fetchPriority="high"
-            width={1376}
-            height={768}
+            width={1672}
+            height={941}
           />
           <div className="hero__scrim" />
         </div>
 
         <Container className="hero__content">
           <h1 className="hero__title" id="hero-title">
-            Разработка любой сложности
+            {HERO.title}
           </h1>
-          <p className="hero__lead">
-            Веб-приложения, AI-боты и ассистенты: от вашей идеи сразу к результату
-          </p>
+          <p className="hero__lead">{HERO.lead}</p>
           <div className="hero__actions">
             <Button href="#contact" variant="primary">
-              Связаться
+              {HERO.primaryCta}
             </Button>
             <Button href="#work" variant="ghost">
-              Кейсы
+              {HERO.secondaryCta}
             </Button>
           </div>
         </Container>

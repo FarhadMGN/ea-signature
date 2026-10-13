@@ -21,7 +21,7 @@ export function Header() {
             ))}
           </ul>
           <Button className="header__cta" href="#contact" variant="primary">
-            Обсудить проект
+            Связаться
           </Button>
         </nav>
       </Container>

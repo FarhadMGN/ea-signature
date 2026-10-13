@@ -1,8 +1,8 @@
 import './SectionHeading.css'
 
 export type SectionHeadingProps = {
-  eyebrow: string
   title: string
+  eyebrow?: string
   lead?: string
   id?: string
 }
@@ -10,7 +10,7 @@ export type SectionHeadingProps = {
 export function SectionHeading({ eyebrow, title, lead, id }: SectionHeadingProps) {
   return (
     <div className="section-heading">
-      <p className="section-heading__eyebrow">{eyebrow}</p>
+      {eyebrow ? <p className="section-heading__eyebrow">{eyebrow}</p> : null}
       <h2 className="section-heading__title" id={id}>
         {title}
       </h2>

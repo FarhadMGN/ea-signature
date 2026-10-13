@@ -58,9 +58,8 @@ export function Contact({ onSubmit }: ContactProps) {
     <section className="contact" id="contact" aria-labelledby="contact-title">
       <Container>
         <SectionHeading
-          eyebrow="Контакт"
-          title="Обсудить проект"
-          lead="Кратко опишите задачу — отвечу в течение суток."
+          title="Связаться"
+          lead="Кратко опишите задачу. Отвечу в течение суток."
           id="contact-title"
         />
 

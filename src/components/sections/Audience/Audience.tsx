@@ -8,15 +8,15 @@ export function Audience() {
     <section className="audience" aria-labelledby="audience-title">
       <Container>
         <SectionHeading
-          eyebrow="С кем работаю"
-          title="Тем, кому нужно больше часов и ясный результат"
+          title="С кем работаю"
+          lead="Тем, кому нужно больше часов и ясный результат"
           id="audience-title"
         />
-        <ul className="audience__grid">
+        <ul className="audience__list">
           {AUDIENCES.map((item) => (
-            <li key={item.title} className="audience__card">
-              <h3 className="audience__card-title">{item.title}</h3>
-              <p className="audience__card-text">{item.text}</p>
+            <li key={item.title} className="audience__item">
+              <h3 className="audience__name">{item.title}</h3>
+              <p className="audience__text">{item.text}</p>
             </li>
           ))}
         </ul>
